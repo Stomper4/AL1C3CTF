@@ -1,0 +1,3 @@
+Congratulations, the twisting mazes of Pwnderland have taken you deep into the rabbit hole. You may be one of the few contestants able to navigate using the obfuscated maps of this treacherous place. You come across the Caterpillar; he might tell you where Alice has gone, but first you must prove yourself…
+
+He offers you a cryptic binary, its logic twisted like the smoke rings swirling from his hookah. Only by unraveling its secrets can you coax the truth from him. Solve the challenge, and the Caterpillar will reveal your next destination.

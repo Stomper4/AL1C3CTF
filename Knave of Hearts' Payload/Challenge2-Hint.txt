@@ -1,0 +1,2 @@
+This challenge was intended to be solved on Linux x64 architecture.
+

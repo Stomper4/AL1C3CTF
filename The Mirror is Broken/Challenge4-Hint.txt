@@ -1,0 +1,1 @@
+If you import an ELF into ghidra it includes function names and other aids to understand it. If you input Raw Bytes into Ghidra you can patch the instructions to change the logic of the executable.

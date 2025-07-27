@@ -1,0 +1,62 @@
+# Walkthrough for CTF Challenge: Knave of Hearts' Payload
+
+## Meta
+
+Category:
+> Reverse Engingeering
+
+Difficulty:
+> Easy/Medium
+
+Challenge Text: 
+> The Knave of Hearts has encoded a string and slipped it into your hands. Is it a riddle? A trap? Or just a pointer to the flag?
+
+Given: 
+> A text file with shell code
+
+Hint:
+> This challenge was intended to be solved on Linux x64 architecture.
+
+Tools demonstrated in this walkthrough: 
+> C code and GCC compiler
+
+
+
+## Steps to Solve
+
+### Step 1: Insert the Shellcode into a C code which can execute it. 
+- An example is shown below:
+
+```C
+#include <stdio.h>
+
+int main() 
+{
+    const char shellcode[] = "\x48\x31\xc9\x48\x81\xe9\xf1\xff\xff\xff\x48\x8d\x05\xef"
+"\xff\xff\xff\x48\xbb\x6f\x46\x54\xa9\x13\x24\xa5\xe2\x48"
+"\x31\x58\x27\x48\x2d\xf8\xff\xff\xff\xe2\xf4\x27\x77\x9d"
+"\xe1\x92\xcd\x53\x1d\x90\xb9\x1c\x24\x16\xcb\x5a\x1d\x90"
+"\x0e\xef\x9c\xd5\x11\xc7\x8d\xdb\x9b\x21\xe1\x22\x7c\x82"
+"\xaa\x42\xbe\xab\x56\xec\xc6\x51\x9f\x11\x5c\x54\xaf\xc9"
+"\xd6\xa3\xbf\xa9\xea\x66\x92\xf8\xab\xb6\xbf\x84\x10\x62"
+"\x98\xf5\x11\xf8\xd7\xa9\x73\x53\xa5\xcf\x96\xf0\x96\xe5"
+"\x42\x75\xf5\xe4\xad\x96\xac\xe5\x12\x58\xa2\xc2\x9d\x99"
+"\xb9\xe8\x24\x59\xa8\xc3\x9c\xa2\xbb\xc8\x1d\x52\xf3\xef"
+"\xca\x9c\x9b\xd4\x73\x60\x91\xf3\xa7\xba\xec\xf1\x7c\x33"
+"\xc6\xa7\xf9\xd0\xe2";
+    int (*ptr)() = (int(*)())shellcode;
+    ptr();
+}
+```
+
+### Step 2: Compile the code with stack execution:
+
+Command:
+```
+gcc -g -fno-stack-protector -z execstack shellcode.c -o runme
+```
+
+
+![chal2img1](<chal2img1.png>)
+
+

@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+const char *FLAG = "AL1C3CTF{";
+const char *HINT = "RWNsaXBzZSBJREUgaGFzIGEgZ3JlYXQgYnVpbHQgaW4gQyBkZWJ1Z2dlcg==";
+void rtgre(char *yuskfd);void ksjdfh(int *ldkfj){char *t5=(char *)ldkfj;rtgre(t5);}void pdsfjsdfsdf(int \
+*mnmvp){mnmvp[5]=13164;ksjdfh(mnmvp);}void cbdjks(int *zsrt){int hsdfksdjf[6] = {392101947,536895068,119\
+7172572,374409022,1148929885,1949512556};int zsct[6];for (int i=0;i<6;i++){zsct[i]=(zsrt[i]^hsdfksdjf[i]);\
+}if(zsct[0]==zsct[1]&&zsct[1]==zsct[2]&&zsct[2]==zsct[3]&&zsct[3]==zsct[4]&&zsct[4]==zsrt[5]){if(zsct[5] =\
+= 0){char *var=&((char *)zsrt)[20];printf("3%.*s_work\n",4,var);pdsfjsdfsdf(zsrt);}}}void wwv(int *ysdioaf\
+){int ysdi0af[6];for(int i=0;i<5;i++){ysdi0af[i]=(ysdioaf[i]<<4)|(ysdioaf[i]>>28);}ysdi0af[5]=ysdioaf[5];c\
+bdjks(ysdi0af);}int main(int argc,char *argv[]){if(argc!=6){exit(1);}int qp[6]={1949512556,1949512556,1949\
+512556,1949512556,1949512556,1949512556};for(int i=1;i<argc;i++){qp[i-1]=atoi(argv[i]);}wwv(qp);return 0;}\
+void rtgre(char*bhfsd){printf("%s%s}\n",FLAG,bhfsd);}
